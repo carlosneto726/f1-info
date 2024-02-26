@@ -8,10 +8,9 @@ export class F1LivetimingService {
 
   constructor(private http: HttpClient) { }
 
-  // https://openf1.org/
-  private: string = "https://api.openf1.org/v1";
+  // https://http://ergast.com/
+  private urlErgast: string = "http://ergast.com/api/f1/drivers.json";
 
-  getAllDrivers(){
-    return this.http.get(`${this.private}/drivers`);
-  }
+  // https://api.openf1.org/
+  private urlOpenf1: string = "https://api.openf1.org/v1"
 }
