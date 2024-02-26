@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterModule } from '@angular/router';
+import { F1LivetimingService } from './services/f1-livetiming.service';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +13,14 @@ import { RouterOutlet, RouterModule } from '@angular/router';
 
 export class AppComponent {
   title = 'f1-info';
+
+  constructor(f1Service: F1LivetimingService) {
+    f1Service.getIndex2024().subscribe(
+      a => a
+    );
+  }
+
+
+
 }
 
