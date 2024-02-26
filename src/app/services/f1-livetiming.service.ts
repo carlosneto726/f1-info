@@ -8,9 +8,10 @@ export class F1LivetimingService {
 
   constructor(private http: HttpClient) { }
 
-  private: string = "https://livetiming.formula1.com/static/2024/Index.json";
+  // https://openf1.org/
+  private: string = "https://api.openf1.org/v1";
 
-  getIndex2024(){
-    return this.http.get(this.private);
+  getAllDrivers(){
+    return this.http.get(`${this.private}/drivers`);
   }
 }
