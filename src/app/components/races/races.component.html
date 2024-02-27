@@ -1,1 +1,5 @@
-<p>races works!</p>
+@for(race of races; track race){
+    <p>
+        <a routerLink="/race/{{race.meeting_key}}">{{ race.meeting_official_name }}</a>
+    </p>
+}

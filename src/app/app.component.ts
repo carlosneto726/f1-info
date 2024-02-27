@@ -14,10 +14,6 @@ import { F1LivetimingService } from './services/f1-livetiming.service';
 export class AppComponent {
   title = 'f1-info';
 
-  constructor(f1Service: F1LivetimingService) {
-    f1Service.getAllDrivers().subscribe(
-      (driver) => console.log(driver)
-    );
-  }
+  constructor(f1Service: F1LivetimingService) {  }
 }
 
